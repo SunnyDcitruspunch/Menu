@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 13</title>
+    @*@Styles.Render("~/Content/bootstraptheme.min.css")
+    @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand">Healthlink Cooperative</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-link">
+                    <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">Stack</a>
+                </li>
+                <li class="nav-link">
+                    <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Queue</a>
+                </li>
+                <li class="nav-link">
+                    <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Dictionary</a>
+                </li>
+                <li class="nav-link">
+                    <a href="@Url.Action("Exit", "Home")" class="w3-bar-item w3-button">Exit</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Group 13.</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
