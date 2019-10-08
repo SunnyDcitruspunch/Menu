@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/Content/bootstrap.min (2).css" rel="stylesheet" />
+    <link href="~/Content/myStyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="sidenav" class="btn-group-vertical" data-toggle="buttons">
+        <a href="@Url.Action("AddOne", "Queue")" class="btn btn-primary" type="button" role="button">Add one time to Queue</a>
+        <a href="@Url.Action("AddAlot", "Queue")" class="btn btn-primary" type="button" role="button">Add Huge List of Items to Queue</a>
+        <a href="@Url.Action("Index", "Queue")" class="btn btn-primary" type="button" role="button">Display Queue</a>
+        <a href="@Url.Action("DeleteAll", "Queue")" class="btn btn-primary" type="button" role="button">Delete from Queue</a>
+        <a href="@Url.Action("Index", "Queue")" class="btn btn-primary" type="button" role="button">Clear Queue</a>
+        <a href="@Url.Action("Index", "Queue")" class="btn btn-primary" type="button" role="button">Search Queue</a>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary" type="button" role="button">Return to Main Menu</a>
+    </div>
+    <div id="newentry" class="center">
+        @foreach (var sData in ViewBag.MyQueue)
+        {
+            <p>@sData</p>
+        }
+    </div>
+</body>
+</html>

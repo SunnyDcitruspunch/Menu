@@ -7,11 +7,20 @@
 <html>
 <head>
     <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/Content/myStyle.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min (2).css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Stack Index</title>
 </head>
 <body>
-
+    <div class="jumbotron" style="margin-top: 30px">
+        <h1 style="text-align: center">Data Structure is Fun :)</h1>
+    </div>
+    <div class="center" id="wrapper">
+        <a href="@Url.Action("Index", "Queue")" type="button" role="button" class="btn btn-outline-secondary">Queue</a>
+        <a href="@Url.Action("Index", "Dictionary")" type="button" role="button" class="btn btn-outline-secondary">Dictionary</a>
+        <a href="@Url.Action("Index", "Stack")" type="button" role="button" class="btn btn-outline-secondary">Stack</a>
+    </div>
 </body>
 </html>
